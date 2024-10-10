@@ -28,7 +28,16 @@ public class Money {
     public boolean equals(Object o) {
         // TODO: реализуйте вышеуказанную функцию
 
-        return false;
+        //
+        if (this == o) return true;
+        if (o == null && getClass() != o.getClass()){return false;}
+
+        Money money = (Money) o;
+        if (type != money.type){return false;}
+
+        BigDecimal thisAmount = amount.setScale(4,RoundingMode.HALF_UP);
+        BigDecimal otherAmount = money.amount.setScale(4,RoundingMode.HALF_UP);
+        return thisAmount.equals(otherAmount);
     }
 
     /**
