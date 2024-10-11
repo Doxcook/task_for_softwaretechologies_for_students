@@ -27,16 +27,18 @@ public class Money {
     @Override
     public boolean equals(Object o) {
         // TODO: реализуйте вышеуказанную функцию
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) return true; // Если объекты одинаковые
+        if (o == null || getClass() != o.getClass()) return false; // Если объект null или классы не совпадают
 
-        Money money = (Money) o;
+        Money money = (Money) o; // Приведение объекта к типу Money
 
-        if (type != money.type) return false;
+        if (type != money.type) return false; // Сравнение типов валют
 
+        // Округляем сумму до 4 знаков, если amount == null, то считаем сумму равной 0
         BigDecimal first = (amount == null) ? BigDecimal.ZERO : amount.setScale(4, RoundingMode.HALF_UP);
         BigDecimal second = (money.amount == null) ? BigDecimal.ZERO : money.amount.setScale(4, RoundingMode.HALF_UP);
 
+        // Сравниваем округленные суммы
         return first.equals(second);
     }
 
@@ -58,9 +60,13 @@ public class Money {
     @Override
     public int hashCode() {
         // TODO: реализуйте вышеуказанную функцию
+        // Если amount == null, то задаем сумму как 10000, иначе округляем до 4 знаков
         BigDecimal scaledAmount = (amount == null) ? BigDecimal.valueOf(10000) : amount.setScale(4, RoundingMode.HALF_UP);
+
+        // Умножаем округленную сумму на 10000 и преобразуем к int
         int amountHash = scaledAmount.multiply(BigDecimal.valueOf(10000)).intValue();
 
+        // Определяем хеш-код для типа валюты
         int typeHash;
         if (type == null) {
             typeHash = 5;
@@ -83,8 +89,10 @@ public class Money {
             }
         }
 
+        // Общий хеш — это сумма хеша суммы и хеша типа валюты
         int totalHash = amountHash + typeHash;
 
+        // Если общий хеш >= (Integer.MAX_VALUE - 5), то возвращаем Integer.MAX_VALUE
         return (totalHash >= (MAX_VALUE - 5)) ? MAX_VALUE : totalHash;
     }
 
@@ -108,9 +116,13 @@ public class Money {
     @Override
     public String toString() {
         // TODO: реализуйте вышеуказанную функцию
+        // Если сумма null, возвращаем "null"
         String amountStr = (amount == null) ? "null" : amount.setScale(4, RoundingMode.HALF_UP).toString();
+
+        // Если тип валюты null, возвращаем "null"
         String typeStr = (type == null) ? "null" : type.toString();
 
+        // Возвращаем строку в формате "Тип_Валюты: Сумма"
         return typeStr + ": " + amountStr;
     }
 
