@@ -27,17 +27,17 @@ public class Money {
     @Override
     public boolean equals(Object o) {
         // TODO: реализуйте вышеуказанную функцию
-
-        //
         if (this == o) return true;
-        if (o == null && getClass() != o.getClass()){return false;}
+        if (o == null || getClass() != o.getClass()) return false;
 
         Money money = (Money) o;
-        if (type != money.type){return false;}
 
-        BigDecimal thisAmount = amount.setScale(4,RoundingMode.HALF_UP);
-        BigDecimal otherAmount = money.amount.setScale(4,RoundingMode.HALF_UP);
-        return thisAmount.equals(otherAmount);
+        if (type != money.type) return false;
+
+        BigDecimal first = (amount == null) ? BigDecimal.ZERO : amount.setScale(4, RoundingMode.HALF_UP);
+        BigDecimal second = (money.amount == null) ? BigDecimal.ZERO : money.amount.setScale(4, RoundingMode.HALF_UP);
+
+        return first.equals(second);
     }
 
     /**
@@ -58,10 +58,34 @@ public class Money {
     @Override
     public int hashCode() {
         // TODO: реализуйте вышеуказанную функцию
+        BigDecimal scaledAmount = (amount == null) ? BigDecimal.valueOf(10000) : amount.setScale(4, RoundingMode.HALF_UP);
+        int amountHash = scaledAmount.multiply(BigDecimal.valueOf(10000)).intValue();
 
+        int typeHash;
+        if (type == null) {
+            typeHash = 5;
+        } else {
+            switch (type) {
+                case USD:
+                    typeHash = 1;
+                    break;
+                case EURO:
+                    typeHash = 2;
+                    break;
+                case RUB:
+                    typeHash = 3;
+                    break;
+                case KRONA:
+                    typeHash = 4;
+                    break;
+                default:
+                    typeHash = 5;
+            }
+        }
 
-        Random random = new Random();
-        return random.nextInt();
+        int totalHash = amountHash + typeHash;
+
+        return (totalHash >= (MAX_VALUE - 5)) ? MAX_VALUE : totalHash;
     }
 
     /**
@@ -84,8 +108,10 @@ public class Money {
     @Override
     public String toString() {
         // TODO: реализуйте вышеуказанную функцию
-        String str = type.toString()+": "+amount.setScale(4, RoundingMode.HALF_UP).toString();
-        return str;
+        String amountStr = (amount == null) ? "null" : amount.setScale(4, RoundingMode.HALF_UP).toString();
+        String typeStr = (type == null) ? "null" : type.toString();
+
+        return typeStr + ": " + amountStr;
     }
 
     public BigDecimal getAmount() {

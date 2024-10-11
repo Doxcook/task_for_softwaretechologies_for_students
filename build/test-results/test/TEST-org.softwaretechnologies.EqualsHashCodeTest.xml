@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.softwaretechnologies.EqualsHashCodeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-11T13:31:32" hostname="COMA2" time="0.166">
+  <properties/>
+  <testcase name="validate()" classname="org.softwaretechnologies.EqualsHashCodeTest" time="0.166"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

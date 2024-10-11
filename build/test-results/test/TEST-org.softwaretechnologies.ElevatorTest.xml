@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.softwaretechnologies.ElevatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-10T05:54:49" hostname="PC102097" time="0.059">
-  <properties/>
-  <testcase name="wrongFloor()" classname="org.softwaretechnologies.ElevatorTest" time="0.059"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
