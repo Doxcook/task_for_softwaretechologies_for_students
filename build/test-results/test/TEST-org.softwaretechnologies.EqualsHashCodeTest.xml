@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.softwaretechnologies.EqualsHashCodeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-11T13:46:14" hostname="COMA2" time="0.158">
+<testsuite name="org.softwaretechnologies.EqualsHashCodeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-17T05:44:39" hostname="PC102097" time="4.681">
   <properties/>
-  <testcase name="validate()" classname="org.softwaretechnologies.EqualsHashCodeTest" time="0.158"/>
+  <testcase name="validate()" classname="org.softwaretechnologies.EqualsHashCodeTest" time="4.681"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

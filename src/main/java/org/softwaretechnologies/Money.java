@@ -70,7 +70,7 @@ public class Money {
         int typeHash;
         if (type == null) {
             typeHash = 5;
-        } else {
+        } else {//typeHash = type.ordinal();
             switch (type) {
                 case USD:
                     typeHash = 1;
