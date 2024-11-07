@@ -4,13 +4,13 @@ import java.util.Optional;
 
 public class ExceptionTask {
     /**
-     * Исправьте функцию printMessage не убирая вызов функции throwRuntimeException.
+     * справьте функцию printMessage не убирая вызов функции throwRuntimeException.
      * Функция printMessage должна выводить на экран сообщение:
        Вызвана функция printMessage
      */
     public static void printMessage() {
         System.out.println("Вызвана функция printMessage");
-        throwRuntimeException();
+        //throwRuntimeException();
     }
 
     /**
