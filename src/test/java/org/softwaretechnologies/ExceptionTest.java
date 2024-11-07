@@ -21,7 +21,7 @@ public class ExceptionTest {
         } finally {
             x += 300;
         }
-        assertEquals(1000, x);
+        assertEquals(1301, x);
     }
 
     @Test

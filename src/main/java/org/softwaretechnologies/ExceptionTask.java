@@ -10,7 +10,7 @@ public class ExceptionTask {
      */
     public static void printMessage() {
         System.out.println("Вызвана функция printMessage");
-        throw new RuntimeException();
+        throwRuntimeException();
     }
 
     /**
@@ -19,9 +19,8 @@ public class ExceptionTask {
      Вызвана функция printMessage2
      */
     public static void printMessage2() throws Exception {
-        System.out.println("Вызвана функция printMessage2\r\n");
+        System.out.println("Вызвана функция printMessage2");
         throwCatchableException();
-        // TODO: реализуйте вышеуказанную функцию
     }
 
     private static void throwCatchableException() throws Exception {
@@ -47,7 +46,7 @@ public class ExceptionTask {
     }
 
     /**
-     * Исправьте возможные ошибки в функции.
+     * справьте возможные ошибки в функции.
      * Функция возвращает конкатенацию двух строк: наибольшую из двух строк с другой строкой.
      * Если один из параметров null, то должен возвращаться Optional со значением другой строки (не null).
      * Если обе строки равны null, то должен возвращаться пустой Optional.
