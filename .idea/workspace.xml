@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="631e36af-6f9a-4ffc-a638-cd5c0c305a14" name="Changes" comment="emptyProject">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softwaretechnologies/ExceptionTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softwaretechnologies/ExceptionTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/softwaretechnologies/ExceptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softwaretechnologies/ExceptionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,10 +91,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.ExceptionTaskTest.divide.executor": "Run",
+    "Gradle.ExceptionTaskTest.mergeStrings.executor": "Run",
+    "Gradle.ExceptionTaskTest.printMessage.executor": "Run",
+    "Gradle.ExceptionTaskTest.printMessage2.executor": "Run",
+    "Gradle.ExceptionTest.test1.executor": "Run",
     "Gradle.ExceptionTest.test2.executor": "Run",
     "Gradle.ExceptionTest.test3.executor": "Run",
+    "Gradle.ExceptionTest.test4.executor": "Run",
+    "Gradle.ExceptionTest.test5.executor": "Run",
+    "Gradle.task_for_softwaretechologies_for_students [assemble].executor": "Run",
     "Gradle.task_for_softwaretechologies_for_students [build].executor": "Run",
     "Gradle.task_for_softwaretechologies_for_students [clean].executor": "Run",
+    "Gradle.task_for_softwaretechologies_for_students [testClasses].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "task5",
@@ -107,7 +113,31 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.task_for_softwaretechologies_for_students [build]">
+  <component name="RunManager" selected="Gradle.ExceptionTest.test5">
+    <configuration name="ExceptionTaskTest.mergeStrings" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.softwaretechnologies.ExceptionTaskTest.mergeStrings&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="ExceptionTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -156,56 +186,61 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="task_for_softwaretechologies_for_students [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ExceptionTest.test4" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--scan" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.softwaretechnologies.ExceptionTest.test4&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="task_for_softwaretechologies_for_students [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ExceptionTest.test5" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.softwaretechnologies.ExceptionTest.test5&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.task_for_softwaretechologies_for_students [build]" />
-        <item itemvalue="Gradle.task_for_softwaretechologies_for_students [clean]" />
+        <item itemvalue="Gradle.ExceptionTest.test5" />
+        <item itemvalue="Gradle.ExceptionTest.test4" />
         <item itemvalue="Gradle.ExceptionTest.test3" />
         <item itemvalue="Gradle.ExceptionTest.test2" />
+        <item itemvalue="Gradle.ExceptionTaskTest.mergeStrings" />
       </list>
     </recent_temporary>
   </component>
@@ -218,6 +253,15 @@
       <option name="presentableId" value="Default" />
       <updated>1695837630593</updated>
     </task>
+    <task id="LOCAL-00001" summary="emptyProject">
+      <option name="closed" value="true" />
+      <created>1731323911930</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731323911930</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
