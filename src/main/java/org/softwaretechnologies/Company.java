@@ -24,7 +24,6 @@ public class Company {
     public void addEmployee(String name, int baseSalary, EmployeeType type) {
         // TODO: реализуйте вышеуказанную функцию
 
-
     }
 
     /**

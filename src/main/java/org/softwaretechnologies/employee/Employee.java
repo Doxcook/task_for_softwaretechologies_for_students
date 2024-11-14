@@ -1,5 +1,8 @@
 package org.softwaretechnologies.employee;
 
+import java.time.LocalDate;
+import java.time.YearMonth;
+
 /**
  * Создайте классы, наследуемые от Employee и представляющие каждый из типов указанный в enum EmployeeType.
  * Для каждого из них реализуйте функцию getMonthSalary по следующим формулам:
@@ -30,8 +33,8 @@ public abstract class Employee {
         }
         @Override
         public int getMonthSalary(int month) {
-            if ()
-            return base;
+            if (month % 2 == 0){return baseSalary;}
+            else{return baseSalary/2;}
         }
 
     }
@@ -42,7 +45,7 @@ public abstract class Employee {
         }
         @Override
         public int getMonthSalary(int month) {
-            return 0;
+            return baseSalary;
         }
     }
 
@@ -52,7 +55,7 @@ public abstract class Employee {
         }
         @Override
         public int getMonthSalary(int month) {
-            return 0;
+            return baseSalary * YearMonth.of(LocalDate.now().getYear(), month).lengthOfMonth();
         }
     }
 
