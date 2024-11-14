@@ -21,4 +21,39 @@ public abstract class Employee {
     public String getName() {
         return name;
     }
+
+
+
+    public class Manager extends Employee{
+        public Manager(String name, int baseSalary) {
+            super(name, baseSalary);
+        }
+        @Override
+        public int getMonthSalary(int month) {
+            if ()
+            return base;
+        }
+
+    }
+
+    public class Programmer extends Employee{
+        public Programmer(String name, int baseSalary) {
+            super(name, baseSalary);
+        }
+        @Override
+        public int getMonthSalary(int month) {
+            return 0;
+        }
+    }
+
+    public class Tester extends Employee{
+        protected Tester(String name, int baseSalary) {
+            super(name, baseSalary);
+        }
+        @Override
+        public int getMonthSalary(int month) {
+            return 0;
+        }
+    }
+
 }

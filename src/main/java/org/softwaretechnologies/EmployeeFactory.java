@@ -2,6 +2,8 @@ package org.softwaretechnologies;
 
 import org.softwaretechnologies.employee.*;
 
+import static org.softwaretechnologies.employee.EmployeeType.*;
+
 public class EmployeeFactory {
 
     /**
@@ -17,6 +19,7 @@ public class EmployeeFactory {
 
     public static Employee createEmployee(String name, int baseSalary, EmployeeType type) {
         // TODO: реализуйте вышеуказанную функцию
+
 
         return null;
     }
