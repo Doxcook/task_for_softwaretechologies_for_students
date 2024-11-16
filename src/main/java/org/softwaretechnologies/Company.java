@@ -6,6 +6,7 @@ import org.softwaretechnologies.employee.EmployeeType;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Company {
     private final String name;
     private final List<Employee> employeeList;
@@ -22,8 +23,12 @@ public class Company {
      * @param type тип работника
      */
     public void addEmployee(String name, int baseSalary, EmployeeType type) {
-        // TODO: реализуйте вышеуказанную функцию
-
+        Employee employee = switch (type) {
+            case Manager -> new Employee.Manager(name, baseSalary);
+            case Programmer -> new Employee.Programmer(name, baseSalary);
+            case Tester -> new Employee.Tester(name, baseSalary);
+        };
+        employeeList.add(employee); // Добавляем сотрудника в список
     }
 
     /**
@@ -32,10 +37,13 @@ public class Company {
      * @return сумма зарплат всех сотрудников за указанный месяц
      */
     public int getMonthSalary(int month) {
-        // TODO: реализуйте вышеуказанную функцию
-
-        return 0;
+        int sum = 0;
+        for (Employee employee : employeeList) {
+            sum += employee.getMonthSalary(month);
+        }
+        return sum; // Возвращаем итоговую сумму
     }
+
 
     public String getName() {
         return name;

@@ -27,7 +27,7 @@ public abstract class Employee {
 
 
 
-    public class Manager extends Employee{
+    public static class Manager extends Employee{
         public Manager(String name, int baseSalary) {
             super(name, baseSalary);
         }
@@ -39,7 +39,7 @@ public abstract class Employee {
 
     }
 
-    public class Programmer extends Employee{
+    public static class Programmer extends Employee{
         public Programmer(String name, int baseSalary) {
             super(name, baseSalary);
         }
@@ -49,8 +49,8 @@ public abstract class Employee {
         }
     }
 
-    public class Tester extends Employee{
-        protected Tester(String name, int baseSalary) {
+    public static class Tester extends Employee{
+        public Tester(String name, int baseSalary) {
             super(name, baseSalary);
         }
         @Override
