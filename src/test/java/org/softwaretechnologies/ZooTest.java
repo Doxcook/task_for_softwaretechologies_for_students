@@ -18,7 +18,7 @@ class ZooTest {
         zoo.addAnimal(AnimalFactory.createAnimal("abu", AnimalType.COW));
         zoo.addAnimal(AnimalFactory.createAnimal("bob", AnimalType.DOG));
         zoo.addAnimal(AnimalFactory.createAnimal("yoyo", AnimalType.CAT));
-
+        assertEquals(zoo.getAnimalList().size(),4);
         List<String> sounds = zoo.soundAllAnimalsSortByName();
         List<String> expected = Arrays.asList("moo", "woof", "meow", "meow");
         int i = 0;
